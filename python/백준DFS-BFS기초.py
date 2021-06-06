@@ -5,22 +5,25 @@ print(matrix);
 
 for _ in range(m): #간선의 갯수 만큼 이동 할 수 있다.
     line = list(map(int, stdin.readline().split())) #줄 단위로 값을 쪼갠다.
-    matrix[line[0]][line[1]] = 1
+    matrix[line[0]][line[1]] = 1 
     matrix[line[1]][line[0]] = 1
 
 def bfs(start):
     visited = [start]
     queue = [start]
+    print("BFS", visited)
     while queue:
         n = queue.pop(0)
         for c in range(len(matrix[start])):
             if matrix[n][c] == 1 and (c not in visited):
                 visited.append(c)
+                print("BFS", visited)
                 queue.append(c)
     return visited
 
 def dfs(start, visited):
     visited += [start]
+    print("DFS", visited)
     for c in range(len(matrix[start])):
         if matrix[start][c] == 1 and (c not in visited):
             dfs(c, visited)
