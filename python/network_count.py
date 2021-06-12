@@ -2,7 +2,6 @@ def solution(n, computers):
     answer = 0
 
     network = []
-    networking = []
     
     for i in range(n) :
         # print(i)
