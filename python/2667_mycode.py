@@ -8,8 +8,8 @@ for _ in range(n) :
     # print(list(int(m)))
     mapArr.append(list(map(int, list(m))))
 
-for i in range(len(mapArr)) :
-    print(mapArr[i])
+#for i in range(len(mapArr)) :
+    #print(mapArr[i])
 
 start = []
 connect = []
@@ -50,8 +50,8 @@ for i in range(n):
             # 일단 1로 뭔가의 그룹이다.
             ans.append(dfs(mapArr, cnt+1, i, j))
 
-for i in range(len(mapArr)) :
-    print(mapArr[i])
+#=for i in range(len(mapArr)) :
+    #print(mapArr[i])
 
 print(len(ans))
 for i in sorted(ans):
